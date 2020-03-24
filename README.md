@@ -12,10 +12,10 @@ Tasks to answer in your own README.md that you submit on Canvas:
 
 1.  See TimerException and there are 3 questions
     1.  What is serialVersionUID and why do we need it? (please read on Internet)
-            * serialVersionUID is an identifier for all serializable classes (such as Exceptions) which indicate which version of the class has been serialized. This provides protection in the event of serializing a class, changing the internal members, and then attempting to de-serialize the old class which no longer matches the version of the JVM is aware of. If serialVersionUID in the serialized class does not match the version of the class at runtimes, then an InvalidClassException will be thrown by the deserialization.
+        * serialVersionUID is an identifier for all serializable classes (such as Exceptions) which indicate which version of the class has been serialized. This provides protection in the event of serializing a class, changing the internal members, and then attempting to de-serialize the old class which no longer matches the version of the JVM is aware of. If serialVersionUID in the serialized class does not match the version of the class at runtimes, then an InvalidClassException will be thrown by the deserialization.
     
     2.  Why do we need to override constructors?
-            * If the subclass did not override the constructors which take a message or a message and a Throwable, then one could not create a TimerException with a specified message or cause. Generally speaking, if one wants a user outside of a class to be able to pass arguments to the superclass constructor for a subclass, one must override that constructor in the subclass and pass the arguments to the superclass constructor via super(args here).
+        * If the subclass did not override the constructors which take a message or a message and a Throwable, then one could not create a TimerException with a specified message or cause. Generally speaking, if one wants a user outside of a class to be able to pass arguments to the superclass constructor for a subclass, one must override that constructor in the subclass and pass the arguments to the superclass constructor via super(args here).
 
     3.  Why we did not override other Exception methods?	
             * Exception only declares a number of constructors, most of which are overridden here. Thus, there are no proper methods to override; one could have overridden additional constructors, but these are slightly redundant in many cases.
@@ -44,4 +44,4 @@ Tasks to answer in your own README.md that you submit on Canvas:
     * NullPointerException is a RuntimeException, and thus is unchecked (meaning that the user need not warn the world that the method might throw it).
 
 1.  Push the updated/fixed source code to your own repository.
-    * Done and done.
+    * Done and done: https://github.com/MicahSchiewe/Lab8-LoggerWithJUnit
