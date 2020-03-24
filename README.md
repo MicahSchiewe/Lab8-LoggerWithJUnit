@@ -4,7 +4,8 @@ Tasks to answer in your own README.md that you submit on Canvas:
 * logger.log differs from the console's log because the console's log is controlled by the ConsoleHandler, which records INFO messages and up (not FINE or FINER messages). Since messages of these other types are logged from other locations (specifically by JUnit), then they do not appear in the log.
 
 1.  Where does this line come from? FINER org.junit.jupiter.engine.execution.ConditionEvaluator logResult Evaluation of condition [org.junit.jupiter.engine.extension.DisabledCondition] resulted in: ConditionEvaluationResult [enabled = true, reason = '@Disabled is not present']
-* An identical log entry, save the insertion of "on [void edu.baylor.ecs.si.Tester.passingTest() throws edu.baylor.ecs.si.TimerException]" between the package name and "resulted in", appears in the logger.log file. It is a log from the JUnit class ConditionEvaluator on the success/failure of a test.
+* An identical log entry, save the insertion of "on [void edu.baylor.ecs.si.Tester.passingTest() throws edu.baylor.ecs.si.TimerException]" between the package name and "resulted in", appears in the logger.log file.
+* Likely of more interest is where the log was *printed* from. It is a log from the JUnit class ConditionEvaluator on the success/failure of a test.
 
 1.  What does Assertions.assertThrows do?
 * Assertions.assertThrows makes a JUnit test to pass if an exception which is an instance of the specified class is thrown, failing otherwise.
@@ -33,6 +34,8 @@ Tasks to answer in your own README.md that you submit on Canvas:
 
 1.  Make a printScreen of your eclipse JUnit5 plugin run (JUnit window at the bottom panel)
 1.  Make a printScreen of your eclipse Maven test run, with console
+* Done using a console in Eclipse since I don't have Maven proper set up on my computer, but Eclipse does.
+
 1.  What category of Exceptions is TimerException and what is NullPointerException
 * TimerException is a checked exception. These must be declared in the signature of a method which might throw them.
 * NullPointerException is a RuntimeException, and thus is unchecked (meaning that the user need not warn the world that the method might throw it).
